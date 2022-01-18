@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+function Lake(props) {
+  return <h1> {props.name}</h1>
+}
+
+
+function App() {
+  return (
+     //create element (element, where we need to render) arguments(name of tag, propeties, children)
+    React.createElement("h1", null, "Hello!" ),
+    <div >
+     
+     <Lake name="Lake Tahoe" />
+     <Lake name="Nayagara Lake" />
+    </div>
+  );
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  
+  <App/>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
